@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawit Feleke - Full Stack Developer & Graphic design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent: #ffd700;
+            --accent-dark: #d4af37;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: #000;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: #000;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.7) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+            animation: fadeIn 1s ease;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            animation: slideIn 1s ease;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: var(--text-secondary);
+        }
+
+        .hero-btns {
+            margin-top: 30px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-stats {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .portfolio-desc {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        .testimonials-container {
+            display: flex;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .testimonial {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            min-width: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border: none;
+            border-radius: 5px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            margin-right: 15px;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            
+            .hero-btns {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--dark-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .stat-box {
+                width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+            
+            .stat-box {
+                width: 100%;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: left;
+            gap: 10px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo"><img src="logo.png" class="logo" alt="logo"></a>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Dawit Feleke</h1>
+                <h2>Full Stack Developer</h2>
+                <p class="tagline">Building Scalable Apps & Designing Creative Interfaces</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#portfolio" class="btn btn-outline">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="dawit.jpg" alt="Dawit Feleke">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p> I am a passionate and creative professional with experience in Full Stack Developer,
+                         and web hosting. My goal is to provide modern, reliable, and visually engaging digital 
+                         solutions for businesses and individuals. <br><br>
+                        I combine technical expertise with creative design to deliver professional websites that not only look great but also perform well. 
+                        From building clean and responsive websites to designing impactful visuals and 
+                        managing hosting environments, I provide end-to-end digital solutions tailored to clients’ needs.
+                    </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-text">Years of Experience</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-text">Projects Completed</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-text">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Full Stack Development</h3>
+                    <p>Building responsive and scalable web applications using modern technologies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="service-title">Hosting Website</h3>
+                    <p>Creating compelling brand identities and user interfaces that enhance user experience and engagement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Custom Web Solutions</h3>
+                    <p>Developing tailored web solutions that address specific business needs and drive growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://cdn.prod.website-files.com/65cda65f0af1fe67dc20dfeb/66b5ee7d6a6747cba40960bc_Inventory%20Management%20System%20Objectives%20and%20Features-p-1080.png" alt="Stock Management System" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Stock Management System</h3>
+                        <p class="portfolio-desc">A software solution for managing inventory, stock levels, suppliers, and sales. Includes real-time tracking, automated alerts for low stock, and reporting for better business decisions.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://framerusercontent.com/images/rXMlcbV8kMAVanJQ4F0pNGOoHnk.png?scale-down-to=1024&width=1980&height=1080" alt="Smart Kitchen" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Smart Kitchen System</h3>
+                        <p class="portfolio-desc">An innovative system designed to assist with meal planning, recipe management, and inventory tracking of kitchen supplies. Enhances efficiency and minimizes food waste.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://cartwrightking.co.uk/wp-content/uploads/2022/09/Management-Cartoon-Attribution-2.0-Generic-CC-BY-2.0-Digits.co_.uk-Images.jpg.webp" alt="Employee Management System" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Employee Management System</h3>
+                        <p class="portfolio-desc">An application to manage employee records, attendance, payroll, and performance. Ensures better workforce organization, quick data access, and improved HR decision-making.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://kms-healthcare.com/wp-content/uploads/2023/12/Implementing-Healthcare-Data-Integration-Systems-1024x575.png" alt="Hospital System" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Hospital System</h3>
+                        <p class="portfolio-desc">A complete hospital management system that streamlines patient registration, doctor appointments, medical records, billing, and pharmacy management. Improves workflow, reduces paperwork, and enhances patient care.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://as2.ftcdn.net/jpg/14/31/91/21/1000_F_1431912127_mRW4Yzi7AnijvQAeXCPYqQlGjhoM8Yjb.webp" alt="Vehicle Tracking Application" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Vehicle Tracking Application</h3>
+                        <p class="portfolio-desc">A GPS-based tracking solution that monitors vehicles in real time. It provides live location updates, route history, geofencing alerts, and reports to ensure security and efficient fleet management.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://img.choice.com.au/-/media/11798b8063c74fb4b282b29e2c582378.ashx?w=760" alt="uber system" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Uber System</h3>
+                        <p class="portfolio-desc">A ride-hailing platform inspired by Uber, designed to connect drivers and passengers seamlessly. Features include real-time ride requests, fare calculation, trip history, and secure payment options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="text-center">Let's build something amazing together</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for collaboration or just say hello!</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+                        <a href="tel: 251 037429743" class="social-link"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/dawitfeleke777@gmail.com" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Dawit Feleke. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 20;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = Math.ceil(target / speed);
+                
+                if (count < target) {
+                    counter.innerText = Math.min(count + increment, target);
+                    setTimeout(() => animateCounter(counter), 1);
+                }
+            });
+        }
+
+        // Initialize counter when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.about-stats'));
+    </script>
+</body>
+</html>
