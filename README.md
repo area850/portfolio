@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Dawit Feleke</h1>
+<h1 align="center">I'm Dawit Feleke</h1>
  I am a passionate and creative professional with experience in Full Stack Developer,
                          and web hosting. My goal is to provide modern, reliable, and visually engaging digital 
                          solutions for businesses and individuals. <br><br>
