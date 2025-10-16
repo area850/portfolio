@@ -1,5 +1,9 @@
 <h1 align="center">Hi 👋, I'm Dawit Feleke</h1>
-<h3 align="center">I am a passionate and creative professional with experience in Full Stack Developer, and web hosting. My goal is to provide modern, reliable, and visually engaging digital solutions for businesses and individuals. I combine technical expertise with creative design to deliver professional websites that not only look great but also perform well. From building clean and responsive websites to designing impactful visuals and managing hosting environments, I provide end-to-end digital solutions tailored to clients’ needs.</h3>
+<h3 align="left">I am a passionate and creative professional with experience in Full Stack Developer, and web hosting.
+My goal is to provide modern, reliable, and visually engaging digital solutions for businesses and individuals.
+I combine technical expertise with creative design to deliver professional websites that not only look great but also perform well.
+From building clean and responsive websites to designing impactful visuals and managing hosting environments,
+I provide end-to-end digital solutions tailored to clients’ needs.</h3>
 
 - 🔭 I’m currently working on Neuova Coders [https://neuovacoders.com/](https://neuovacoders.com/)
 
