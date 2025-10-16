@@ -66,9 +66,6 @@
 
 ---
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/.github/example-dark.png" width="600" alt="Skill Icons"/>
-</div>
 
 ---
 
