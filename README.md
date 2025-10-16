@@ -1,13 +1,12 @@
 <h1 align="center">👋 Hi, I'm <span style="color:#facc15;">Dawit Feleke</span></h1>
 
-<p align="center">
+<p align="left">
  I am a passionate and creative professional with experience in Full Stack Developer, and web hosting. My goal is to provide modern, reliable, and visually engaging digital solutions for businesses and individuals.
 
 </p>
 
-<p align="center">
-  I combine <strong>technical expertise</strong> with <strong>creative design</strong> to deliver websites that not only look great but also perform seamlessly.<br>
-  From clean and responsive frontends to powerful backend systems, I provide end-to-end digital experiences that make an impact.
+<p align="left">
+I combine <strong> technical expertise </strong>strong> with creative design to deliver professional websites that not only look great but also perform well. From building clean and responsive websites to designing impactful visuals and managing hosting environments, I provide end-to-end digital solutions tailored to clients’ needs.
 </p>
 
 ---
