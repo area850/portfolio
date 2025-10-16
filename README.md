@@ -1,8 +1,8 @@
 <h1 align="center">👋 Hi, I'm <span style="color:#facc15;">Dawit Feleke</span></h1>
 
 <p align="center">
-  I’m a passionate and creative <strong>Full Stack Developer</strong> with experience in <strong>web hosting</strong> and <strong>modern UI/UX design</strong>.<br>
-  My goal is to build fast, reliable, and visually engaging digital solutions for businesses and individuals.
+ I am a passionate and creative professional with experience in Full Stack Developer, and web hosting. My goal is to provide modern, reliable, and visually engaging digital solutions for businesses and individuals.
+
 </p>
 
 <p align="center">
