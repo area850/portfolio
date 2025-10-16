@@ -1,71 +1,86 @@
-<h1 align="center">👋 Hi, I'm <span style="color:#facc15;">Dawit Feleke</span></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dawit Feleke - Portfolio</title>
 
-<p align="left">
- I am a passionate and creative professional with experience in Full Stack Developer, and web hosting. My goal is to provide modern, reliable, and visually engaging digital solutions for businesses and individuals.
+  <!-- ✅ Font Awesome CDN Link -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-5YFzpg6HY2d5cZsRnW1VttEoIb8RzYFj1XWvgrNjoYFgW2bO1K9CKNQXTVPaQm1eX6k81qZ1p2kq7N+5jzM7yg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0d1117;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #facc15;
+      font-size: 2.5em;
+    }
+    p {
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.8;
+    }
+    .social-links a {
+      margin: 8px;
+      color: #facc15;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #ffffff;
+    }
+    .skills i {
+      font-size: 40px;
+      margin: 10px;
+      color: #facc15;
+    }
+  </style>
+</head>
+<body>
 
-</p>
+  <h1><i class="fa-solid fa-briefcase"></i> I'm Dawit Feleke</h1>
+  <p>
+    I am a passionate and creative professional with experience in <strong>Full Stack Development</strong> and <strong>Web Hosting</strong>.<br>
+    My goal is to build reliable, modern, and visually engaging digital solutions for individuals and businesses.
+  </p>
 
-<p align="left">
-I combine <strong> technical expertise </strong>strong> with creative design to deliver professional websites that not only look great but also perform well. From building clean and responsive websites to designing impactful visuals and managing hosting environments, I provide end-to-end digital solutions tailored to clients’ needs.
-</p>
+  <p>
+    I combine <strong>technical expertise</strong> with <strong>creative design</strong> to deliver professional websites that not only look great but also perform perfectly.
+  </p>
 
----
+  <h3><i class="fa-solid fa-diagram-project"></i> Currently Working On</h3>
+  <p>🔭 Neuova Coders — <a href="https://neuovacoders.com/" target="_blank">https://neuovacoders.com/</a></p>
 
-### 🔭 Current Work
+  <h3><i class="fa-solid fa-link"></i> Connect with Me</h3>
+  <div class="social-links">
+    <a href="https://github.com/area850" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:youremail@example.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://area850.github.io/portfolio/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+  </div>
 
-- Working at **[Neuova Coders](https://neuovacoders.com/)** — Building innovative digital platforms and full-stack web applications.
+  <h3><i class="fa-solid fa-code"></i> Languages & Tools</h3>
+  <div class="skills">
+    <i class="fa-brands fa-html5"></i>
+    <i class="fa-brands fa-css3-alt"></i>
+    <i class="fa-brands fa-js"></i>
+    <i class="fa-brands fa-php"></i>
+    <i class="fa-brands fa-python"></i>
+    <i class="fa-brands fa-java"></i>
+    <i class="fa-brands fa-android"></i>
+    <i class="fa-solid fa-database"></i>
+    <i class="fa-brands fa-github"></i>
+  </div>
 
----
-
-### 🌐 Connect with Me
-
-<p align="left">
-<a href="https://github.com/area850" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="mailto:youremail@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-<a href="https://www.linkedin.com/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://area850.github.io/portfolio/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
-</p>
-
----
-
-### 🧰 Languages and Tools
-
-<p align="center">
-  <a href="https://developer.android.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="50" height="50"/>
-  </a>
-  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="50" height="50"/>
-  </a>
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="50" height="50"/>
-  </a>
-  <a href="https://www.java.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/>
-  </a>
-  <a href="https://kotlinlang.org" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="50" height="50"/>
-  </a>
-  <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer">
-    <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="50" height="50"/>
-  </a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50"/>
-  </a>
-  <a href="https://www.php.net" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="50" height="50"/>
-  </a>
-  <a href="https://www.python.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="50" height="50"/>
-  </a>
-</p>
-
----
-
-
----
-
-<p align="center">⭐ “Code with passion, design with purpose, and deliver with excellence.” ⭐</p>
+</body>
+</html>
